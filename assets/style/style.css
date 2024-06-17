@@ -561,7 +561,7 @@ padding-top: 7rem;
 .reason__h4 span {
     font-size: 4.2rem;
 }
-.reason__h4 p {
+.reason__h4 h4 {
     line-height: calc(42 / 24);
 }
 .reason__text {
@@ -717,7 +717,7 @@ padding-top: 7rem;
 }
 .course__tab--itemHeading {
     font-size: 2rem;
-    margin: 1.1rem auto .7rem 2.8rem;
+    margin: 1.6rem auto .7rem 2.8rem;
 }
 .course__tab--itemHeading::before {
     font-size: 2.2rem;
