@@ -302,15 +302,26 @@
             <section class="link__container">
                 <div class="link__faq">
                     <a href="/faq">
+                        <picture>
+                            <source media="(max-width:767px )" srcset="/assets/image/pht_qa.jpg">
+                            <source media="(min-width:768px )" srcset="/assets/image/pht_qa_pc.jpg">
+                            <img src="/assets/image/pht_qa_pc.jpg" alt="よくあるご質問">
+                        </picture>
                         <h3 class="link__faq--h3">よくあるご質問</h3>
                     </a>
                 </div>
                 <div class="link__search">
                     <a href="/search">
+                        <picture>
+                            <source media="(max-width:767px )" srcset="/assets/image/pht_classrooms.jpg">
+                            <source media="(min-width:768px )" srcset="/assets/image/pht_classrooms_pc.jpg">
+                            <img src="/assets/image/pht_classrooms_pc.jpg" alt="最寄りの教室">
+                        </picture>
                         <h3 class="link__search--h3">お近くの教室を探す </h3>
                     </a>
                 </div>
             </section>
+
         </main>
         <footer>
             <small>copyright© 2023 Kira-Kira Juku All Rights Reserved.</small>
@@ -318,7 +329,6 @@
         <!--script-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="/assets/script/main.js"></script>
     </body>
 

@@ -128,6 +128,7 @@ img {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    z-index: 100;
 }
 .header__logo {
     display: flex;
@@ -179,22 +180,23 @@ img {
 .header__nav--hamburger-active li {
     display: flex;
     font-size: 1.8rem;
-    margin: 2rem auto 0 0;
+    margin: 2rem auto 0 1.1rem;
     width: 35rem;
     height: 4.7rem;
     border-bottom: rgba(255, 255, 255, .5) solid 1px;
 }
 .header__nav--hamburger-active li a {
     color: #fff;
-    margin-left: 1.4rem;
+    margin-left: 1.3rem;
 }
 .header__nav--hamburger-active li i {
     color: #fff;
-    margin-left: 1.7rem;
-    margin-top: .5rem;
+    margin-left: 0;
+    margin-top: .6rem;
+    font-size: 1.5rem;
 }
 .header__nav--3rd {
-    letter-spacing: .5rem;
+    letter-spacing: .4rem;
 }
 .header__nav--hamburger-active a:hover {
     opacity: .6;
@@ -205,7 +207,7 @@ img {
     text-align: center;
     line-height: 3.7;
     margin-top: 3.2rem;
-    margin-left: auto;
+    margin-left: 1.1rem;
     margin-right: auto;
     border-radius: 3.3rem;
     background:#fff;
@@ -227,10 +229,12 @@ img {
 }
 .header__nav--pc ul li {
     font-size: 2rem;
-    color: #333;
     margin: 0;
     padding: 0;
     align-self: center;
+}
+.header__nav--pc ul li a {
+    color: #333;
 }
 .header__btn--pc  {
     width: 28.2rem;
@@ -410,7 +414,7 @@ padding-top: 7rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 2.4rem;
-    background-color:#ffaa60;
+    background-color:#f6aa00;
     font-size: 1.6rem;
     font-weight: bold;
     color: #fff;
@@ -433,7 +437,7 @@ padding-top: 7rem;
     width: 34rem;
     height: 7.5rem;
     font-size: 2.4rem;
-    border-radius: 3.25rem;
+    border-radius: 3.75rem;
     line-height: calc(7.5 / 2.4);
     margin-left: 0;
     margin-right: 0;
@@ -443,7 +447,7 @@ padding-top: 7rem;
 .top__link--freetrial {
     width: 34rem;
     height: 7.5rem;
-    border-radius: 3.25rem;
+    border-radius: 3.75rem;
     font-size: 2.4rem;
     line-height: calc(7.5 / 2.4);
     margin-left: 0;
@@ -453,7 +457,7 @@ padding-top: 7rem;
 .top__link--request {
     width: 34rem;
     height: 7.5rem;
-    border-radius: 3.25rem;
+    border-radius: 3.75rem;
     font-size: 2.4rem;
     line-height: calc(7.5 / 2.4);
     margin-left: 0;
@@ -656,29 +660,27 @@ padding-top: 7rem;
 }
 .course__tab--item {
     width: 100%;
-
+    padding-top: 2.8rem;
 }
 .course__tab--itemImg {
 
     width: 100%;
     height: 22rem;
     border-radius: 1.2rem;
-    margin-top: 2.8rem;
-    transition: transform .3s;
     overflow: hidden;
-
 }
+
 .course__tab--itemImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .5s;
+}
+.course__tab--itemImg img:hover {
+    transform: scale(1.2);
 }
 .course__tab--item a:hover{
     opacity: 1;
-    overflow: hidden;
-}
-.course__tab--item a :hover img {
-    transform:scale(1.2);
 }
 .course__tab--itemHeading {
     position: relative;
@@ -710,6 +712,7 @@ padding-top: 7rem;
     flex-direction: column;
     width: 53.2rem;
     margin-top: 3.2rem;
+    padding-top: 0;
 }
 .course__tab--itemImg {
     height: 32.9rem;
@@ -796,6 +799,7 @@ padding-top: 7rem;
     .price__table--headerLeft {
     width: 14.4rem;
     height: 7.4rem;
+    border: #ccc solid .1rem;
 }
     .price__table--headerRight {
     width: 45.1rem;
@@ -818,36 +822,58 @@ padding-top: 7rem;
 
 /*Link*/
 .link__faq {
-    background-image: url(/assets/image/musk.png),url(/assets/image/pht_qa.jpg);
-    background-size: cover;
-    width: 100%;
+    position: relative;
     height: 17rem;
-    padding-left: 1.6rem;
-    padding-top: 6.7rem;
+    overflow: hidden;
 }
+.link__faq img{
+    max-width: none;
+    width: 104%;
+    height: 17rem;
+    transition: .5s;
+    z-index: 10;
+}
+
 .link__faq--h3  {
+    position: absolute;
     font-size: 2.2rem;
     font-weight: bold;
     color: #fff;
+    top: 6.7rem;
+    left: 1.6rem;
 }
-.link__faq:hover {
-    background-size: 120%;
+.link__faq img:hover {
+    transform: scale(1.2);
+}
+.link__faq a:hover{
+    opacity: 1;
 }
 .link__search {
-    background-size: cover;
-    background-image: url(/assets/image/musk.png),url(/assets/image/pht_classrooms.jpg) ;
-    width: 100%;
+    position: relative;
     height: 17rem;
-    padding-left: 1.6rem;
-    padding-top: 6.7rem;
+    overflow: hidden;
+}
+
+.link__search img{
+    /*background-size: cover;
+    background-image: url(/assets/image/musk.png),url(/assets/image/pht_classrooms.jpg) ;*/
+    max-width: none;
+    height: 17rem;
+    transition: .5s;
 }
 .link__search--h3 {
+    position: absolute;
     font-size: 2.2rem;
     font-weight: bold;
     color: #fff;
+    top: 6.7rem;
+    left: 1.6rem;
 }
-.link__search:hover {
-    background-size: 120%;
+.link__search img:hover {
+    transform: scale(1.2);
+}
+.link__search a:hover{
+    opacity: 1;
 }
 @media screen and (min-width:768px) {
     .link__container {
@@ -858,28 +884,44 @@ padding-top: 7rem;
 }
 
     .link__faq {
-    background-image: url(/assets/image/pht_qa_pc.jpg);
-    background-size: cover;
+    /*background-image: url(/assets/image/pht_qa_pc.jpg);
+    background-size: cover;*/
     width: 50%;
     height: 32rem;
     text-align: center;
-    padding-top: 13.9rem;
-    padding-left: .2rem;
+    padding-top: 0rem;
+    padding-left: 0rem;
+}
+    .link__faq img {
+    width: 100%;
+    height: 32rem;
+    padding: 0 0 0 0;
 }
     .link__faq--h3 {
     font-size: 3.2rem;
+    top: 13.7rem;
+    left: 36.8rem;
+    z-index: 90;
 }
     .link__search {
-    background-image: url(/assets/image/pht_classrooms_pc.jpg);
-    background-size: cover;
+    /*background-image: url(/assets/image/pht_classrooms_pc.jpg);
+    background-size: cover;*/
     width: 50%;
     height: 32rem;
     text-align: center;
-    padding-top: 13.9rem;
-    padding-left: .2rem;
+    /*padding-top: 13.9rem;
+    padding-left: .2rem;*/
+}
+    .link__search img {
+    width: 100%;
+    height: 32rem;
+    padding: 0 0 0 0;
 }
     .link__search--h3 {
     font-size: 3.2rem;
+    top: 13.7rem;
+    left: 33.6rem;
+    z-index: 90;
 }
 }
 /*footer*/
