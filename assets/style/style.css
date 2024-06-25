@@ -452,13 +452,25 @@ padding-top: 7rem;
     background-color:#77cb33;
     color: #fff;
 }
+.top__link--inquiry:hover {
+    background-color:#5faa2f;
+    opacity: 1;
+}
 .top__link--freetrial {
     background-color:#f6aa00;
     color: #fff;
 }
+.top__link--freetrial:hover {
+    background-color:#e69c00;
+    opacity: 1;
+}
 .top__link--request {
     background-color:#3ac8ad;
     color: #fff;
+}
+.top__link--request:hover {
+    background-color:#2ab8a0;
+    opacity: 1;
 }
 @media screen and (min-width:768px) {
     .top__link a {
@@ -865,8 +877,6 @@ padding-top: 7rem;
 }
 
 .link__search img{
-    /*background-size: cover;
-    background-image: url(/assets/image/musk.png),url(/assets/image/pht_classrooms.jpg) ;*/
     max-width: none;
     height: 17rem;
     transition: .5s;
@@ -895,8 +905,6 @@ padding-top: 7rem;
 }
 
     .link__faq {
-    /*background-image: url(/assets/image/pht_qa_pc.jpg);
-    background-size: cover;*/
     width: 50%;
     height: calc(320 / 1920 * 100vw);
     text-align: center;
@@ -915,13 +923,9 @@ padding-top: 7rem;
     z-index: 90;
 }
     .link__search {
-    /*background-image: url(/assets/image/pht_classrooms_pc.jpg);
-    background-size: cover;*/
     width: 50%;
-    height: 32rem;
+    height: calc(320 / 1920 * 100vw);
     text-align: center;
-    /*padding-top: 13.9rem;
-    padding-left: .2rem;*/
 }
     .link__search img {
     width: 100%;
