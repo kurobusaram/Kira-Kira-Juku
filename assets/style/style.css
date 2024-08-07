@@ -38,6 +38,7 @@ a {
 
 a:hover {
     opacity: .6;
+    transition: all .3s;
 }
 
 .animate__animated {
@@ -66,11 +67,11 @@ img {
 .entry {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     row-gap: 1rem;
     background-color: rgba(255, 85, 85, .1);
-    height: 21.3rem;
     padding-top: 3.8rem;
+    padding: 3.8rem 0 4rem;
 }
 .entry__text {
     text-align: center;
@@ -78,6 +79,12 @@ img {
     margin-left: auto;
     margin-right: auto;
     line-height: calc(28 / 16);
+}
+.entry__btn--box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    justify-content: center;
 }
 .entry__button {
     width: 30.5rem;
@@ -92,7 +99,6 @@ img {
     font-weight: bold;
     color: #fff;
 }
-
 @media screen and (min-width:768px) {
 .entry {
     height: 23.1rem;
@@ -103,6 +109,12 @@ img {
     width: 50rem;
     font-size: 2rem;
 }
+.entry__btn--box {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4rem;
+    justify-content: center;
+}
 .entry__button {
     width: 36rem;
     height: 7.5rem;
@@ -110,6 +122,32 @@ img {
     font-size: 2.4rem;
     border-radius: 3.75rem;
     padding-left: 2.1rem;                                                                                                                                   ;
+    }
+}
+.entry__link--freetrial {
+    width: 30.5rem;
+    height: 6.9rem;
+    text-align: center;
+    line-height: 3.5;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color:#f6aa00;
+    color: #fff;
+}
+.entry__link--freetrial:hover {
+    background-color:#e69c00;
+    opacity: 1;
+}
+@media screen and (min-width:768px) {
+    .entry__link--freetrial {
+        width: 36rem;
+        height: 7.5rem;
+        line-height: 3.2;
+        font-size: 2.4rem;
+        border-radius: 3.75rem;
     }
 }
 @media screen and (min-width:1056px) {
@@ -589,6 +627,7 @@ padding-top: 7rem;
 .reason__text {
     font-size: 2rem;
     margin-top: 1.6rem;
+    font-size: calc(1.6rem * 1360 / 800);
 }
 }
 @media screen and (min-width:1600px) {
